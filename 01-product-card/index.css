@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #E5E5E5;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-section {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+  height: 482px;
+}
+
+.main__title,
+.card__title,
+.card__btn {
+  font-weight: 900;
+}
+
+.main__title {
+  font-size: 48px;
+  line-height: 72px;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.card__title,
+.card__text {
+  padding: 0 24px;
+}
+
+.card__title {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 20px 0 16px 0;
+}
+
+.card__text,
+.card__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2F2F2F;
+}
+
+.card__btn {
+  width: calc(100% - 48px);
+  margin: 0 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  color: #42940F;
+  border: 2px solid #42940F;
+  border-radius: 8px;
+  background-color: #FFF;
+  transition: .3s ease-in-out;
+}
+
+.card__btn:hover{
+  color: #FFF;
+  background-color: #42940F;
+}
+
+.card__btn:active {
+  background-color: #1F5200;
+  border: 2px solid #1F5200;
+}
+
+.card__btn:disabled {
+  color: #FFF;
+  background-color: #4E4E4E;
+  border: 2px solid #4E4E4E;
+}
+
+.card__label-wrapper {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.card__label {
+  display: inline-block;
+  height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
+.card__label--pink {
+  background-color: #FDCFF3;
+}
+
+.card__label--orange {
+  background-color: #FFCF56;
+  margin-left: 14px;
+}
+
+@media (max-width: 1200px) {
+  .body {
+    height: 100%;
+    padding-bottom: 20px;
+  }
+
+  .cards-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .card__title {
+      font-size: 18px;
+  }
+}

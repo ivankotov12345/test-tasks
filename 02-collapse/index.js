@@ -20,6 +20,8 @@ const stylesBtn = () => {
   button.style.backgroundColor = "green";
   button.style.border = 'none';
   button.style.borderRadius = '8px';
+  button.style.width = '300px';
+  button.style.height = '50px';
 };
 
 stylesBtn();
@@ -27,8 +29,6 @@ stylesBtn();
 const stylesLable = () => {
   lableVisible.style.display = 'none';
   lableHidden.style.display = 'block';
-  button.style.width = '300px';
-  button.style.height = '50px';
 
   buttonLabels.forEach(lable => {
     lable.style.fontSize = '18px';
@@ -38,6 +38,11 @@ const stylesLable = () => {
 }
 
 stylesLable();
+
+const options = {
+  duration: 300,
+  easing: 'ease-in-out',
+};
 
 const stylesContent = () => {
   content.style.fontSize = '24px';
@@ -51,13 +56,8 @@ const animationBtn = () => {
     { opacity: .3 },
     { opacity: 1 },
   ];
-    
-  const optionsBtn = {
-    duration: 300,
-    easing: 'ease-in-out',
-  };
 
-  button.animate(keyframesBtn, optionsBtn)
+  button.animate(keyframesBtn, options)
 }
 
 const fadeInContent = () => {
@@ -67,27 +67,17 @@ const fadeInContent = () => {
     { transform: 'translateY(0)' },
   ];
 
-  const optionsContent = {
-    duration: 300,
-    easing: 'ease-in-out',
-  };
-
-  content.animate(keyframesFadeIn, optionsContent)
+  content.animate(keyframesFadeIn, options)
 }
 
 const fadeOutContent = () => {
   content.style.transform = 'translateY(-1000px)';
-  const keyframesFadeIn = [
+  const keyframesFadeOut = [
     { transform: 'translateY(0)' },
     { transform: 'translateY(-1000px)' },
   ];
 
-  const optionsContent = {
-    duration: 300,
-    easing: 'ease-in-out',
-  };
-
-    content.animate(keyframesFadeIn, optionsContent)
+    content.animate(keyframesFadeOut, options)
 }
 
 const contentToggle = () => {
